@@ -1,6 +1,7 @@
 <?php
 
 use app\controllers\ApiExampleController;
+use app\controllers\CaisseController;
 use app\middlewares\SecurityHeadersMiddleware;
 use flight\Engine;
 use flight\net\Router;
@@ -13,9 +14,7 @@ use flight\net\Router;
 // This wraps all routes in the group with the SecurityHeadersMiddleware
 $router->group('', function(Router $router) use ($app) {
 		$router->get('/', function() use ($app) {
-		$example = new ApiExampleController($app);
-		$produits = $example->home();
-		$app->render('example.php', ['produits'=>$produits]);
+		$app->render('example.php');
 	});
 		
 }, [ SecurityHeadersMiddleware::class ]);
