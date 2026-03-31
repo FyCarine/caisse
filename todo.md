@@ -5,7 +5,7 @@ markdown_text = """
 # 🧾 TODO LIST – Projet TD Frontend (Caisse Supermarché)
 
 ## 1. Base de données
-- [ ] Créer la base de données MySQL
+- [x] Créer la base de données MySQL
 - [ ] Créer la table `produit`
 - [ ] Créer la table `caisse`
 - [ ] Créer la table `achat`
@@ -69,13 +69,5 @@ markdown_text = """
 - [ ] Tester avec plusieurs achats
 - [ ] Préparer le projet pour le rendre
 
----
 
-Bon courage 💪 Tu peux cocher chaque étape quand tu avances !
-"""
 
-# Convert and save as a standalone .md file
-output_path = "/mnt/data/todo_td_supermarche.md"
-pypandoc.convert_text(markdown_text, 'md', format='md', outputfile=output_path, extra_args=['--standalone'])
-
-output_path
