@@ -1,4 +1,6 @@
-
+.gitignore
+app/config/config.php
+vendor/
 .vscode/
 composer.lock
 .vagrant/
